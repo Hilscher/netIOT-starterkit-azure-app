@@ -1,0 +1,19 @@
+{
+  "name": "monitoring-web-app",
+  "version": "0.0.0",
+  "description": "MonitoringWebApp",
+  "main": "app.js",
+  "author": {
+    "name": "maximjung",
+    "email": ""
+  },
+  "dependencies": {
+    "azure-iot-device-mqtt": "^1.0.8",
+    "azure-iothub": "^1.0.4",
+    "body-parser": "^1.15.2",
+    "documentdb": "^1.7.0",
+    "express": "^4.14.0",
+    "jade": "*",
+    "stylus": "*"
+  }
+}

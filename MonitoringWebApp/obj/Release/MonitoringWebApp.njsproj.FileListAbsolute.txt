@@ -1,0 +1,2 @@
+C:\Users\maximjung\Documents\Visual Studio 2015\Projects\netIOTStarterKit\MonitoringWebApp\obj\Release\MonitoringWebApp.njsprojResolveAssemblyReference.cache
+C:\Users\maximjung\Documents\Visual Studio 2015\Projects\netIOTStarterKit\MonitoringWebApp\bin\Microsoft.NodejsTools.WebRole.dll

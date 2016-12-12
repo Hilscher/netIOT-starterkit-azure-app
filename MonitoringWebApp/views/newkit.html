@@ -1,0 +1,23 @@
+﻿<div id="newkit-modal" class="modal" data-backdrop="static" data-keyboard="false">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h4 class="modal-title">Registration successful</h4>
+    </div>
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-sm-12">
+          <label for="device-connection">Copy the following connection string:</label>
+          <input type="text" id="device-connection" placeholder="" class="form-control">
+          <button type="button" class="btn btn-default copy" data-clipboard-target="#device-connection">Copy to clipboard</button>
+        </div>
+        <div class="col-sm-12">
+          <p><strong>Paste string to your Azure node for reference:</strong></p>
+          <img src="/images/node-red.png" class="center-block" style="border: 1px solid grey" />
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default next" data-dismiss="modal">OK &#10097;</button>
+    </div>
+  </div>
+</div>

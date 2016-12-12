@@ -1,0 +1,383 @@
+body {
+  padding-bottom: 20px;
+}
+/* Set padding to keep content from hitting the edges */
+.body-content {
+  padding-top: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+  max-width: 280px;
+}
+/* styles for validation helpers */
+.field-validation-error {
+  color: #b94a48;
+}
+.field-validation-valid {
+  display: none;
+}
+input.input-validation-error {
+  border: 1px solid #b94a48;
+}
+input[type="checkbox"].input-validation-error {
+  border: 0 none;
+}
+.validation-summary-errors {
+  color: #b94a48;
+}
+.validation-summary-valid {
+  display: none;
+}
+/* Dashboard */
+.gridster ul,
+ol {
+  list-style: none;
+}
+.gridster ul>li {
+  background-color: #fff;
+}
+.gridster {
+  width: 910px;
+  margin: 0 auto;
+  opacity: 0.8;
+  background-color: #e3e3e3;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  -ms-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
+.gridster .gs_w {
+  background: #fff;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+/* Dashboard: Commands */
+#comp-command {
+  padding: 8px;
+}
+#comp-command li {
+  border-top: 1px solid #dadada;
+  border-left: 1px solid #dadada;
+}
+#comp-command li:nth-of-type(11n) {
+  border-right: 1px solid #dadada;
+}
+#comp-command li:nth-of-type(n+67) {
+  border-bottom: 1px solid #dadada;
+}
+#comp-command .disabled {
+  background-color: #a8a8a8;
+  cursor: default;
+}
+.selectable-led-matrix {
+  list-style-type: none;
+  margin-left: 10px;
+  padding: 0;
+  width: 220px;
+}
+.selectable-led-matrix .ui-selecting {
+  background: #ff0718;
+}
+.selectable-led-matrix .ui-selected {
+  background: #cc0613;
+  color: #fff;
+}
+.selectable-led-matrix li {
+  float: left;
+  width: 20px;
+  height: 20px;
+  font-size: 8pt;
+  text-align: center;
+  cursor: pointer;
+}
+/* Dashboard: Drill */
+#selectable-drill li:hover {
+  border: 1px solid #cc0613;
+}
+/* Dashboard: Mill */
+#selectable-mill li:hover {
+  border: 1px solid #cc0613;
+}
+/* Dashboard: Color */
+#selectable-paint {
+  width: 221px;
+  margin-left: 10px;
+}
+#selectable-paint input {
+  width: 20px;
+  height: 20px;
+}
+#selectable-paint .sp-preview {
+  border-top: 1px solid #dadada;
+  border-left: 1px solid #dadada;
+  border-bottom: none;
+  border-right: none;
+}
+#selectable-paint .sp-preview:hover {
+  border: 1px solid #cc0613;
+}
+#selectable-paint .sp-active .sp-preview {
+  border: 1px solid #cc0613;
+}
+#selectable-paint .sp-light:nth-of-type(11n) {
+  border-right: 1px solid #dadada;
+}
+#selectable-paint .sp-light:nth-of-type(n+67) {
+  border-bottom: 1px solid #dadada;
+}
+.sp-replacer {
+  padding: 0;
+  margin: 0;
+  border: none;
+  float: left;
+}
+.sp-replacer .sp-dd {
+  display: none;
+}
+.sp-replacer .sp-preview {
+  margin: 0;
+  width: 20px;
+}
+/* Custom Bootstrap */
+/* Device Forms */
+.device {
+  width: 910px;
+  padding-bottom: 8px;
+  margin: 0 auto;
+}
+.send-command {
+  width: 100%;
+}
+.device .form-device {
+  float: left;
+  width: 100%;
+}
+#device-id-dashboard {
+  max-width: none;
+}
+.device .form-update {
+  width: 100%;
+  float: right;
+  padding-top: 25px;
+}
+.form-update .btn-update {
+  width: 100%;
+}
+.modal-footer {
+  margin-top: 0;
+}
+#welcome-modal .alert {
+  display: none;
+}
+#newkit-modal .copy {
+  float: right;
+  margin-top: 8px;
+}
+.modal input {
+  max-width: none;
+}
+/* Dashboard: Process */
+#comp-process .msg {
+  font-size: 8pt;
+  margin-left: 8px;
+  margin-top: 8px;
+}
+#process-chart {
+  height: 100%;
+}
+/* Dashboard: Logs */
+#comp-logs {
+  font-size: 8pt;
+  padding: 8px;
+}
+#comp-logs .table-responsive {
+  display: none;
+  height: 100%;
+  overflow-y: scroll;
+}
+#comp-logs .date {
+  width: 72px;
+}
+#comp-logs .order {
+  width: 10px;
+}
+/* netIOT Styles */
+header {
+  z-index: 20;
+}
+header.iot-frame {
+  padding-top: 20px;
+  padding-bottom: 0;
+  background-color: transparent;
+}
+#topRibbon,
+#bottomRibbon {
+  background-color: #cc0613;
+  height: 32px;
+  width: 100%;
+  position: relative;
+}
+.imprint {
+  float: right;
+}
+#topRibbon:before,
+#bottomRibbon:before {
+  content: "\00a0";
+  display: block;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  z-index: 200;
+}
+#topRibbon:after,
+#bottomRibbon:after {
+  content: "\00a0";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  z-index: 200;
+}
+#topRibbon {
+  margin-bottom: 0;
+}
+#topRibbon:before {
+  width: 67%;
+  top: 24px;
+  background-color: rgba(204,6,19,0.9);
+}
+#topRibbon:after {
+  left: 67%;
+  top: 32px;
+  border-width: 12px 30px 0 0;
+  border-color: rgba(204,6,19,0.9) transparent transparent transparent;
+}
+#bottomRibbon {
+  margin-top: 60px;
+}
+#bottomRibbon:before {
+  width: 33%;
+  top: -12px;
+  background-color: #cc0613;
+}
+#bottomRibbon:after {
+  left: 33%;
+  top: -12px;
+  border-width: 12px 0 0 30px;
+  border-color: transparent transparent transparent #cc0613;
+}
+.iot-navbar-transparent {
+  margin-bottom: 0;
+}
+.iot-navbar-transparent.navbar {
+  min-height: 10px;
+}
+.iot-navbar-transparent .navbar-brand {
+  padding: 0;
+  height: 10px;
+}
+.iot-navbar-transparent .navbar-nav > li > a {
+  padding-top: 7px;
+  padding-bottom: 5px;
+  color: #666;
+}
+.iot-navbar-transparent .navbar-nav > li > a:focus,
+.iot-navbar-transparent .navbar-nav > li > a:hover {
+  background-color: #f7f7fc;
+}
+.iot-navbar-transparent .navbar-nav > li.active > a,
+.iot-navbar-transparent .navbar-nav > li:hover > a {
+  color: #000;
+}
+.icon-bar {
+  border: 1px solid #808080;
+}
+.iot-logo {
+  position: relative;
+  width: 120px;
+}
+.iot-logo > img {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  z-index: 300;
+}
+form.navbar-right {
+  margin-right: inherit;
+}
+form.navbar-right > .form-group {
+  margin-bottom: 10px;
+}
+form.navbar-right > .form-group > input {
+  border-radius: 20px;
+}
+.iot-content-header {
+  margin-bottom: 15px;
+}
+.iot-content-header > h1 {
+  color: #cc0613;
+  margin-top: 0;
+}
+/* scolldown */
+.iot-scrollDown .iot-logo > img {
+  box-shadow: 0 12px 20px -15px rgba(0,0,0,0.7);
+}
+.iot-scrollDown > header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  margin-left: -500px;
+  width: 1000px;
+  padding-top: 0;
+  background-color: #fff;
+  height: 35px;
+}
+.iot-scrollDown > header + section {
+  margin-top: 110px;
+}
+.iot-scrollDown > header#topRibbon {
+  position: fixed;
+  top: 35px;
+  left: 0;
+  margin-left: 0;
+  width: 100%;
+  padding-top: 0;
+  background-color: #cc0613;
+  height: 32px;
+  z-index: 18;
+  box-shadow: 0 15px 15px -12px rgba(0,0,0,0.7);
+}
+.iot-scrollDown > header#topRibbon:before {
+  box-shadow: 0 9px 15px -8px rgba(0,0,0,0.99);
+  background-color: #cc0613;
+}
+.iot-scrollDown > header#topRibbon:after {
+  border-color: #cc0613 transparent transparent transparent;
+}
+footer.iot-frame {
+  padding-top: 10px;
+  background-color: transparent;
+  margin-bottom: 40px;
+}
+footer.iot-frame a {
+  color: #666;
+}
+footer.iot-frame .nav-tabs {
+  border-bottom: none;
+  border-radius: 0;
+}
+footer.iot-frame .nav-tabs > li > a {
+  border-bottom: none;
+  border-radius: 0;
+}
+footer.iot-frame .nav-tabs > li > a:hover,
+footer.iot-frame .nav-tabs > li > a:focus {
+  background-color: #f7f7fc;
+}

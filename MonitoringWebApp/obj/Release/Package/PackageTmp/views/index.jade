@@ -1,0 +1,107 @@
+﻿extends layout
+
+block content
+  include register.html
+  include existingkit.html
+  include newkit.html
+  include start.html
+  .row.iot-content-header
+    h1 netIOT - Industrial Cloud Communication
+  div.row.device
+    div.col-sm-8
+      div(class="form-group form-device")
+        div.row
+          div.col-sm-6
+            label(for="device-name-dashboard") Your Starterkit Name:
+            input(type="text", id="device-name-dashboard", placeholder="Please enter your Starterkit name", class="form-control")
+          div.col-sm-6
+            label(for="email-dashboard") Your Email Address:
+            input(type="text", id="email-dashboard", placeholder="Please enter your email adress", class="form-control")
+    div.col-sm-4
+      div(class="form-group form-update")
+        button(type='button', class='btn btn-default btn-update', data-toggle='tooltip' data-placement='top' title='Tooltip on right') Update Dashboard
+  div.gridster
+      ul
+        li#comp-command(data-row='1', data-col='1', data-sizex='6', data-sizey='2')
+          div.row
+            div.col-sm-4
+              div.panel.panel-default
+                div.panel-heading Define the drilling pattern
+                div.panel-body
+                  ol#selectable-drill.selectable-led-matrix
+                    each row in [1, 2, 3, 4, 5, 6, 7]
+                      each col in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+                        li.ui-state-default(data-row=row, data-col=col)
+            div.col-sm-4
+              div.panel.panel-default
+                div.panel-heading Define the milling pattern
+                div.panel-body
+                  ol#selectable-mill.selectable-led-matrix
+                    each row in [1, 2, 3, 4, 5, 6, 7]
+                      each col in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+                        li.ui-state-default(data-row=row, data-col=col)
+            div.col-sm-4
+              div.panel.panel-default
+                div.panel-heading Define the painting pattern
+                div.panel-body
+                  div#selectable-paint
+                    each row in [1, 2, 3, 4, 5, 6, 7]
+                      each col in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+                        input(id='paint-#{row}-#{col}', type='text', data-row=row, data-col=col)
+          div.row
+            div.col-sm-4
+              fieldset.form-group.form-group-production-id
+                input(type='text', class='form-control', id='production-id', placeholder='Order number')
+            div.col-sm-4
+              fieldset.form-group.form-group-production-count
+                input(type='text', class='form-control', id='production-count', placeholder='Production volume')
+            div.col-sm-4
+              fieldset.form-group.form-group-send
+                button.send-command(type='button', class='btn btn-default') Send Order
+
+        li#comp-process(data-row='3', data-col='1', data-sizex='4', data-sizey='2')
+          div.msg
+          div#process-chart
+        li#comp-logs(data-row='4', data-col='4', data-sizex='2', data-sizey='2')
+          div.msg
+          div.table-responsive
+            table.table
+              thead
+                tr
+                  th.date Date
+                  th.order Order
+                  th Message
+              tbody
+
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js')
+    script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
+
+    script(src='/bower_components/gridster/dist/jquery.gridster.js')
+    script(src='/bower_components/spectrum/spectrum.js')
+    script(src='/bower_components/bootstrap-touchspin/src/jquery.bootstrap-touchspin.js')
+    script(src='/bower_components/bootstrap-modal/js/bootstrap-modal.js')
+    script(src='/bower_components/bootstrap-modal/js/bootstrap-modalmanager.js')
+    script(src='/bower_components/remarkable-bootstrap-notify/bootstrap-notify.js')
+
+    script(src='/bower_components/clipboard/dist/clipboard.js')
+
+    script(src='/bower_components/amcharts/dist/amcharts/amcharts.js')
+    script(src='/bower_components/amcharts/dist/amcharts/serial.js')
+    script(src='/bower_components/amcharts/dist/amcharts/gantt.js')
+    script(src='/bower_components/amcharts/dist/amcharts/themes/light.js')
+
+    script(src='http://code.jquery.com/ui/1.11.4/jquery-ui.js')
+
+    script(src='/javascripts/helper/helper.js')
+    script(src='/javascripts/device/device.js')
+    script(src='/javascripts/modal/modal.start.js')
+
+    script(src='/javascripts/dashboard/dashboard.js')
+    script(src='/javascripts/dashboard/dashboard.ordernumber.js')
+    script(src='/javascripts/dashboard/dashboard.paint.js')
+    script(src='/javascripts/dashboard/dashboard.drillmill.js')
+    script(src='/javascripts/dashboard/dashboard.send.js')
+    script(src='/javascripts/dashboard/dashboard.errors.js')
+    script(src='/javascripts/dashboard/dashboard.update.js')
+    script(src='/javascripts/dashboard/dashboard.process.js')
+    block scripts

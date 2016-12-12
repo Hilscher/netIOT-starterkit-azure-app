@@ -1,0 +1,45 @@
+﻿doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title #{title}
+
+    link(rel='stylesheet', type='text/css', href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
+    link(rel='stylesheet', type='text/css', href='/bower_components/bootstrap/dist/css/bootstrap-theme.min.css')
+
+    link(rel='stylesheet', type='text/css', href='/bower_components/bootstrap-touchspin/src/jquery.bootstrap-touchspin.css')
+    link(rel='stylesheet', type='text/css', href='/bower_components/bootstrap-modal/css/bootstrap-modal-bs3patch.css')
+    link(rel='stylesheet', type='text/css', href='/bower_components/bootstrap-modal/css/bootstrap-modal.css')
+
+    link(rel='stylesheet', type='text/css', href='/bower_components/gridster/dist/jquery.gridster.min.css')
+    link(rel='stylesheet', type='text/css', href='/bower_components/spectrum/spectrum.css')
+
+    link(rel='stylesheet', type='text/css', href='/stylesheets/style.css')
+
+  body
+    header#topNav.iot-frame.container
+      nav.navbar.iot-navbar-transparent
+        .navbar-header
+          a(href='http://www.netiot.com/', target='_blank').navbar-brand.iot-logo
+            img(src='/images/netiot100.jpg', alt='netIOT Logo', title='netIOT')
+        #navbar.navbar-collapse.navbar-left(aria-expanded='false')
+          ul.nav.navbar-nav
+            li.active
+              a(href='/') Home
+            li
+              a(href='http://www.netiot.com/', target='_blank') Documentation
+    header#topRibbon
+
+    .container.body-content
+      block content
+    footer#bottomRibbon
+    footer.iot-frame
+      .col-sm-5.col-md-5
+        ul.nav.nav-tabs
+          li
+            a(href='http://www.hilscher.com/', target='_blank') &copy; Hilscher Gesellschaft für Systemautomation mbH
+      .col-sm-2.col-md-2.imprint
+        ul.nav.nav-tabs.nav-justified
+          li
+            a(href='http://www.hilscher.com/en/imprint/', target='_blank') Imprint
