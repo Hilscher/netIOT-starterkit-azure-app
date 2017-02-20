@@ -18,6 +18,11 @@ The project consists of three parts:
 2. Configure the Azure IoT Hub Connection and the DocumentDB Connection Data in the MonitoringWebApp/lib/config.js and also in the EventProcessorRole/WorkerRole.cs.
 3. Configure EventProcessor/ServiceConfiguration.Cloud.cscfg and EventProcessor/ServiceConfiguration.Local.cscfg in order to publish the Worker Role to Azure.
 
+## Node-RED Flow
+
+* The netIOT Starterkit comes with a pre-installed Node-RED flow. In case you lost/need it: Import ImportClipboard.json (root directory) to your Node-RED.
+
+
 ## Application Screenshot
 ![alt text](images/web-application.png "Application Screenshot")
 
